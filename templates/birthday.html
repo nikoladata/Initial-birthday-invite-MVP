@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ invitation.title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="card">
+
+        <div class="hero-image">
+            <img src="/static/images/img1.png" alt="Lenka">
+        </div>
+
+        <p class="small-title">🎀 ПОЗИВНИЦА 🎀</p>
+
+        <h1>{{ invitation.title }}</h1>
+
+        <h2>Наша мала принцеза пуни 1 годину 💕</h2>
+
+        <p class="message">
+            {{ invitation.message }}
+        </p>
+
+        <div class="countdown-box">
+            <p>До прославе је остало:</p>
+            <div id="countdown">Учитавање...</div>
+        </div>
+
+        <section class="gallery">
+            <img src="/static/images/img1.png" alt="Lenka 1">
+            <img src="/static/images/img2.png" alt="Lenka 2">
+            <img src="/static/images/img3.png" alt="Lenka 3">
+        </section>
+
+        <div class="info">
+            <p>📅 <strong>Датум:</strong> {{ invitation.date }}</p>
+            <p>🕔 <strong>Време:</strong> {{ invitation.time }}</p>
+            <p>🎉 <strong>Локација:</strong> {{ invitation.place }}</p>
+            <p>📍 <strong>Адреса:</strong> {{ invitation.address }}</p>
+        </div>
+
+        <div class="music-box">
+            <button onclick="playMusic()">🎵 Пусти песмицу за Ленку</button>
+
+            <audio id="birthdaySong" loop>
+                <source src="/static/music/song.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <div class="buttons">
+            <a href="{{ invitation.maps_url }}" target="_blank">
+                📍 Погледај мапу
+            </a>
+
+            <a href="{{ invitation.form_url }}" target="_blank">
+                💌 Потврди долазак
+            </a>
+        </div>
+
+        <div class="share-box">
+            <button onclick="shareInvite()">
+                📲 Подели позивницу
+            </button>
+        </div>
+
+        <p class="footer-text">
+            Једва чекамо да заједно прославимо Ленкин први рођендан 💖
+        </p>
+
+    </div>
+</div>
+
+<script>
+    const birthdayDate = new Date("2026-07-19T17:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = birthdayDate - now;
+
+        if (distance <= 0) {
+            document.getElementById("countdown").innerHTML = "Данас славимо! 🎂🎉";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        document.getElementById("countdown").innerHTML =
+            days + " дана • " +
+            hours + " сати • " +
+            minutes + " мин • " +
+            seconds + " сек";
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    let musicStarted = false;
+
+    function playMusic() {
+        const song = document.getElementById("birthdaySong");
+        song.play();
+        musicStarted = true;
+    }
+
+    document.addEventListener("click", function () {
+        if (!musicStarted) {
+            const song = document.getElementById("birthdaySong");
+
+            song.play().then(() => {
+                musicStarted = true;
+            }).catch(() => {
+                // Browser nije dozvolio autoplay bez jasnog klika na dugme
+            });
+        }
+    });
+</script>
+
+<script>
+    function shareInvite() {
+    
+        if (navigator.share) {
+    
+            navigator.share({
+                title: document.title,
+                text: "Позивница за Ленкин први рођендан 🎀",
+                url: window.location.href
+            });
+    
+        } else {
+    
+            navigator.clipboard.writeText(window.location.href);
+    
+            alert("Линк је копиран 📋");
+        }
+    }
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozivnice Online</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+<header class="nav">
+    <div class="logo">Pozivnice<span>Online</span></div>
+    <a href="#demo" class="nav-btn">Погледај примере</a>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="badge">✨ Дигиталне позивнице за посебне тренутке</p>
+
+            <h1>
+                Позивнице које се памте,
+                деле и потврђују једним кликом.
+            </h1>
+
+            <p class="subtitle">
+                Елегантне online позивнице за венчања, рођендане,
+                крштења и прославе — са сликама, мапом, RSVP потврдама,
+                countdown-ом и share дугметом.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/nikola-sofija" class="primary">💍 Венчање демо</a>
+                <a href="/lenka-prvi-rodjendan" class="secondary">🎂 Рођендан демо</a>
+            </div>
+        </div>
+
+        <div class="phone-preview">
+            <div class="phone">
+                <div class="phone-card">
+                    <p class="mini">Позивница за венчање</p>
+                    <h2>Никола<br>&<br>Софија</h2>
+                    <p class="mini-date">12. септембар 2026.</p>
+                    <button>💌 Потврди долазак</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div><strong>RSVP</strong><span>потврде доласка</span></div>
+        <div><strong>Maps</strong><span>локација једним кликом</span></div>
+        <div><strong>Share</strong><span>Viber / WhatsApp / link</span></div>
+    </section>
+
+    <section class="section" id="demo">
+        <p class="section-label">Примери</p>
+        <h2>Изабери стил позивнице</h2>
+
+        <div class="demo-grid">
+            <a href="/nikola-sofija" class="demo-card wedding">
+                <span>💍</span>
+                <h3>Венчање</h3>
+                <p>Елегантна позивница са timeline-ом, RSVP формом и мапом.</p>
+            </a>
+
+            <a href="/lenka-prvi-rodjendan" class="demo-card birthday">
+                <span>🎂</span>
+                <h3>Први рођендан</h3>
+                <p>Слатка позивница са сликама, музиком, countdown-ом и потврдом.</p>
+            </a>
+
+            <div class="demo-card soon">
+                <span>👶</span>
+                <h3>Крштење</h3>
+                <p>У припреми — нежан и свечан template за породичне догађаје.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how">
+        <p class="section-label">Како ради?</p>
+        <h2>Од идеје до позивнице за кратко време</h2>
+
+        <div class="steps">
+            <div><b>1</b><h3>Пошаљеш податке</h3><p>Имена, датум, локацију, слике и текст.</p></div>
+            <div><b>2</b><h3>Добијеш линк</h3><p>Позивница је online и спремна за дељење.</p></div>
+            <div><b>3</b><h3>Пратиш потврде</h3><p>Гости потврђују долазак преко форме.</p></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>PozivniceOnline.rs — дигиталне позивнице за ваше најлепше дане.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ invitation.title }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='wedding.css') }}">
+</head>
+<body>
+
+<main class="wedding-card">
+
+    <section class="hero">
+        <img src="{{ url_for('static', filename='images/wedding/img1.png') }}" alt="Андреј и Анђела">
+
+        <p class="small">Позивамо Вас на венчање</p>
+
+        <h1>{{ invitation.groom }}</h1>
+        <div class="amp">&</div>
+        <h1>{{ invitation.bride }}</h1>
+
+        <p class="date">{{ invitation.date }}</p>
+    </section>
+
+    <section class="message">
+        <p>{{ invitation.message }}</p>
+    </section>
+
+    <section class="countdown-box">
+        <p>До венчања је остало:</p>
+        <div id="countdown">Учитавање...</div>
+    </section>
+
+    <section class="timeline">
+        <h2>План дана</h2>
+
+        <div class="timeline-item">
+            <span>{{ invitation.church_time }}</span>
+            <div>
+                <strong>Црквено венчање</strong>
+                <p>{{ invitation.church }}</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <span>{{ invitation.restaurant_time }}</span>
+            <div>
+                <strong>Свечано славље</strong>
+                <p>{{ invitation.restaurant }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <img src="{{ url_for('static', filename='images/wedding/img2.png') }}" alt="Slika 2">
+        <img src="{{ url_for('static', filename='images/wedding/img3.png') }}" alt="Slika 3">
+        <img src="{{ url_for('static', filename='images/wedding/img4.png') }}" alt="Slika 4">
+    </section>
+
+    <section class="buttons">
+        <a href="{{ invitation.maps_url }}" target="_blank">📍 Погледај мапу</a>
+        <a href="{{ invitation.form_url }}" target="_blank">💌 Потврди долазак</a>
+    </section>
+
+    <section class="share-box">
+        <button onclick="shareInvite()">📲 Подели позивницу</button>
+    </section>
+
+    <p class="footer">
+        Радујемо се што ћете бити део нашег дана. 🤍
+    </p>
+
+</main>
+
+<script>
+    const weddingDate = new Date("{{ invitation.datetime }}").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance <= 0) {
+            document.getElementById("countdown").innerHTML = "Данас је велики дан! 💍";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+
+        document.getElementById("countdown").innerHTML =
+            days + " дана • " + hours + " сати • " + minutes + " мин";
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    function shareInvite() {
+        if (navigator.share) {
+            navigator.share({
+                title: document.title,
+                text: "Позивница за венчање Андреја и Анђеле 💍",
+                url: window.location.href
+            });
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert("Линк је копиран 📋");
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -22,13 +22,26 @@ body {
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: 900;
-    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #3C2D22;
+
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.logo img {
+    width: 34px;
+    height: 34px;
 }
 
 .logo span {
-    color: #ff79aa;
+    letter-spacing: -0.5px;
 }
 
 .nav-btn {
@@ -349,4 +362,70 @@ footer {
     .how h2 {
         font-size: 34px;
     }
+}
+
+.contact-section {
+    max-width: 1180px;
+    margin: 0 auto 80px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 44px;
+    margin: 20px 0 10px;
+}
+
+.contact-subtitle {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #6b5a4d;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    text-decoration: none;
+    color: inherit;
+    padding: 35px;
+    border-radius: 32px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+}
+
+.contact-card span {
+    font-size: 42px;
+}
+
+.contact-card h3 {
+    margin: 18px 0 10px;
+    font-size: 24px;
+}
+
+.contact-card p {
+    color: #6b5a4d;
+    word-break: break-word;
+}
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section h2 {
+        font-size: 34px;
+    }
+
 }

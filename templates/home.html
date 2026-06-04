@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pozivnice Online</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
 </head>
 <body>
 
 <header class="nav">
-    <div class="logo">Pozivnice<span>Online</span></div>
+    <a href="/" class="logo">
+        <img src="{{ url_for('static', filename='symbol.svg') }}" alt="PozivniceOnline">
+        <span>PozivniceOnline</span>
+    </a>
     <a href="#demo" class="nav-btn">Погледај примере</a>
 </header>
 
@@ -30,7 +34,7 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="/nikola-sofija" class="primary">💍 Венчање демо</a>
+                <a href="/andrej-andjela" class="primary">💍 Венчање демо</a>
                 <a href="/lenka-prvi-rodjendan" class="secondary">🎂 Рођендан демо</a>
             </div>
         </div>
@@ -39,8 +43,8 @@
             <div class="phone">
                 <div class="phone-card">
                     <p class="mini">Позивница за венчање</p>
-                    <h2>Никола<br>&<br>Софија</h2>
-                    <p class="mini-date">12. септембар 2026.</p>
+                    <h2>Андреј<br>и<br>Анђела</h2>
+                    <p class="mini-date">20. септембар 2026.</p>
                     <button>💌 Потврди долазак</button>
                 </div>
             </div>
@@ -91,7 +95,41 @@
 </main>
 
 <footer>
-    <p>PozivniceOnline.rs — дигиталне позивнице за ваше најлепше дане.</p>
+    <section class="contact-section">
+
+        <p class="section-label">Контакт</p>
+    
+        <h2>Желите своју дигиталну позивницу?</h2>
+    
+        <p class="contact-subtitle">
+            Пошаљите нам поруку и заједно ћемо направити позивницу за ваш посебан дан.
+        </p>
+    
+        <div class="contact-grid">
+    
+            <a href="tel:+381600998231" class="contact-card">
+                <span>📞</span>
+                <h3>Телефон</h3>
+                <p>+381 60 099 8231</p>
+            </a>
+    
+            <a href="mailto:pozivniceonline@gmail.com" class="contact-card">
+                <span>📩</span>
+                <h3>Email</h3>
+                <p>pozivniceonline@gmail.com</p>
+            </a>
+    
+            <a href="https://instagram.com/pozivniceonline.rs"
+               target="_blank"
+               class="contact-card">
+                <span>📷</span>
+                <h3>Instagram</h3>
+                <p>@pozivniceonline.rs</p>
+            </a>
+    
+        </div>
+    
+    </section>
 </footer>
 
 </body>

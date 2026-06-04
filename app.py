@@ -7,12 +7,12 @@ INVITATIONS = {
         "type": "birthday",
         "child_name": "Ленка",
         "title": "Ленкин први рођендан",
-        "date": "15. август 2026.",
+        "date": "19. jul 2026.",
         "time": "17:00",
-        "place": "Играоница",
-        "address": "Београд",
+        "place": "Гуњетинац плус",
+        "address": "Власотинце",
         "maps_url": "https://maps.google.com",
-        "form_url": "TVOJ_GOOGLE_FORM_LINK",
+        "form_url": "https://forms.gle/C45QD2WVDoX8piz67",
         "message": "Дођите да заједно прославимо Ленкин први рођендан, уз осмехе, игру и пуно љубави 💕"
     },
 

@@ -1,0 +1,15 @@
+<svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="260" fill="#FFF8EF"></rect>
+
+  <path d="M450 36 L466 52 L450 68 L434 52 Z" fill="none" stroke="#B7965A" stroke-width="3"></path>
+
+  <text x="450" y="132" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="400" letter-spacing="1.5" fill="#3C2D22">
+    PozivniceOnline
+  </text>
+
+  <line x1="280" y1="160" x2="620" y2="160" stroke="#B7965A" stroke-width="2" stroke-linecap="round"></line>
+
+  <text x="450" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="5" fill="#9C7A43">
+    DIGITALNE POZIVNICE
+  </text>
+</svg>

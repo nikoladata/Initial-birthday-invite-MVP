@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Елегантне дигиталне позивнице за венчања, рођендане, крштења и прославе — са RSVP потврдама, мапом, countdown-ом и дељењем једним кликом.">
+    <meta property="og:title" content="PozivniceOnline.rs">
+    <meta property="og:description" content="Дигиталне позивнице за венчања, рођендане, крштења и прославе.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pozivniceonline.rs">
+    <meta property="og:image" content="https://pozivniceonline.rs/static/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PozivniceOnline.rs">
+    <meta name="twitter:description" content="Елегантне дигиталне позивнице са RSVP потврдама, мапом и share дугметом.">
+    <meta name="twitter:image" content="https://pozivniceonline.rs/static/og-image.png">
     <title>Pozivnice Online</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
@@ -20,12 +30,13 @@
 <main>
     <section class="hero">
         <div class="hero-text">
-            <p class="badge">✨ Дигиталне позивнице за посебне тренутке</p>
+            <p class="badge">✦ Дигиталне позивнице за посебне тренутке ✦</p>
 
             <h1>
                 Позивнице које се памте,
                 деле и потврђују једним кликом.
             </h1>
+            <div class="title-divider"></div>
 
             <p class="subtitle">
                 Елегантне online позивнице за венчања, рођендане,
@@ -34,9 +45,9 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="/andrej-andjela" class="primary">💍 Венчање демо</a>
-                <a href="/lenka-prvi-rodjendan" class="secondary">🎂 Рођендан демо</a>
-            </div>
+                <a href="/andrej-andjela" class="primary">◇ Венчање демо</a>
+
+                <a href="/lenka-prvi-rodjendan" class="secondary">✦ Рођендан демо</a>            </div>
         </div>
 
         <div class="phone-preview">
@@ -45,7 +56,7 @@
                     <p class="mini">Позивница за венчање</p>
                     <h2>Андреј<br>и<br>Анђела</h2>
                     <p class="mini-date">20. септембар 2026.</p>
-                    <button>💌 Потврди долазак</button>
+                    <button> Потврди долазак</button>
                 </div>
             </div>
         </div>
@@ -58,24 +69,69 @@
     </section>
 
     <section class="section" id="demo">
-        <p class="section-label">Примери</p>
-        <h2>Изабери стил позивнице</h2>
+
+        <section class="showcase">
+            <p class="section-label">Наши примери</p>
+           
+        
+            <h2>Позивнице које изгледају лепо и на телефону</h2>
+            <div class="title-divider2"></div>
+            <p class="showcase-subtitle">
+                Свака позивница је прилагођена догађају, са сликама, мапом, потврдом доласка и дељењем једним кликом.
+            </p>
+        
+            <div class="showcase-grid">
+        
+                <a href="/andrej-andjela" class="showcase-card">
+                    <div class="showcase-image wedding-preview">
+                        <div class="preview-phone">
+                            <p>Позивница за венчање</p>
+                            <h3>Андреј<br>&<br>Анђела</h3>
+                            <span>Потврди долазак</span>
+                        </div>
+                    </div>
+        
+                    <div class="showcase-content">
+                        <p class="tag">Венчање</p>
+                        <h3>Елегантна свадбена позивница</h3>
+                        <p>Timeline дана, RSVP форма, мапа и дељење линка.</p>
+                    </div>
+                </a>
+        
+                <a href="/lenka-prvi-rodjendan" class="showcase-card">
+                    <div class="showcase-image birthday-preview">
+                        <div class="preview-phone pink">
+                            <p>Први рођендан</p>
+                            <h3>Ленка</h3>
+                            <span>Потврди долазак</span>
+                        </div>
+                    </div>
+        
+                    <div class="showcase-content">
+                        <p class="tag">Рођендан</p>
+                        <h3>Слатка позивница за први рођендан</h3>
+                        <p>Фотографије, музика, countdown и Google форма.</p>
+                    </div>
+                </a>
+        
+            </div>
+        </section>
 
         <div class="demo-grid">
-            <a href="/nikola-sofija" class="demo-card wedding">
-                <span>💍</span>
+            <a href="/andrej-andjela" class="demo-card wedding">
+                <img class="icon" src="{{ url_for('static', filename='icons/wedding.svg') }}" alt="">
                 <h3>Венчање</h3>
                 <p>Елегантна позивница са timeline-ом, RSVP формом и мапом.</p>
             </a>
 
             <a href="/lenka-prvi-rodjendan" class="demo-card birthday">
-                <span>🎂</span>
+                <img class="icon" src="{{ url_for('static', filename='icons/birthday.svg') }}" alt="">
                 <h3>Први рођендан</h3>
                 <p>Слатка позивница са сликама, музиком, countdown-ом и потврдом.</p>
             </a>
 
             <div class="demo-card soon">
-                <span>👶</span>
+                <img class="icon" src="{{ url_for('static', filename='icons/baptism.svg') }}" alt="">
                 <h3>Крштење</h3>
                 <p>У припреми — нежан и свечан template за породичне догађаје.</p>
             </div>
@@ -85,7 +141,7 @@
     <section class="how">
         <p class="section-label">Како ради?</p>
         <h2>Од идеје до позивнице за кратко време</h2>
-
+        <div class="title-divider2"></div>
         <div class="steps">
             <div><b>1</b><h3>Пошаљеш податке</h3><p>Имена, датум, локацију, слике и текст.</p></div>
             <div><b>2</b><h3>Добијеш линк</h3><p>Позивница је online и спремна за дељење.</p></div>
@@ -100,7 +156,8 @@
         <p class="section-label">Контакт</p>
     
         <h2>Желите своју дигиталну позивницу?</h2>
-    
+        <div class="title-divider2"></div>
+           
         <p class="contact-subtitle">
             Пошаљите нам поруку и заједно ћемо направити позивницу за ваш посебан дан.
         </p>
@@ -108,13 +165,13 @@
         <div class="contact-grid">
     
             <a href="tel:+381600998231" class="contact-card">
-                <span>📞</span>
+                <span><img class="icon" src="{{ url_for('static', filename='icons/phone.svg') }}" alt=""></span>
                 <h3>Телефон</h3>
                 <p>+381 60 099 8231</p>
             </a>
     
             <a href="mailto:pozivniceonline@gmail.com" class="contact-card">
-                <span>📩</span>
+                <img class="icon" src="{{ url_for('static', filename='icons/mail.svg') }}" alt="">
                 <h3>Email</h3>
                 <p>pozivniceonline@gmail.com</p>
             </a>
@@ -122,7 +179,7 @@
             <a href="https://instagram.com/pozivniceonline.rs"
                target="_blank"
                class="contact-card">
-                <span>📷</span>
+               <img class="icon" src="{{ url_for('static', filename='icons/instagram.svg') }}" alt="">
                 <h3>Instagram</h3>
                 <p>@pozivniceonline.rs</p>
             </a>

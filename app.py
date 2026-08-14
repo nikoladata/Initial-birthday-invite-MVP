@@ -23,13 +23,15 @@ INVITATIONS = {
         "title": "Андреј и Анђела",
         "date": "20. септембар 2026.",
         "datetime": "2026-09-20T15:00:00",
-        "church_time": "15:00",
+        "church_time": "12:00",
         "church": "Црква Свете Тројице",
-        "restaurant_time": "17:30",
+        "city_time": "12:00",
+        "city": "Општина Власотинце",
+        "restaurant_time": "16:00",
         "restaurant": "Бавка скај",
         "address": "Власотинце",
-        "maps_url": "https://maps.google.com",
-        "form_url": "TVOJ_GOOGLE_FORM_LINK",
+        "maps_url": "google.com/maps?rlz=1C1GCEA_enRS1122RS1122&um=1&ie=UTF-8&fb=1&gl=rs&sa=X&geocode=KUMsyZoFeVVHMUNdTBk9rNy0&daddr=Dobri+Španca,+Лесковац+16000",
+        "form_url": "https://forms.gle/nLRrMFRaZD18Po1H9",
         "message": "Са великом радошћу Вас позивамо да будете део нашег најлепшег дана и да са нама прославите почетак заједничког живота."
     }
 }

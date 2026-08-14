@@ -30,7 +30,7 @@ INVITATIONS = {
         "restaurant_time": "16:00",
         "restaurant": "Бавка скај",
         "address": "Власотинце",
-        "maps_url": "google.com/maps?rlz=1C1GCEA_enRS1122RS1122&um=1&ie=UTF-8&fb=1&gl=rs&sa=X&geocode=KUMsyZoFeVVHMUNdTBk9rNy0&daddr=Dobri+Španca,+Лесковац+16000",
+        "maps_url": "https://maps.app.goo.gl/4G65sRg8BUtH9dmv8",
         "form_url": "https://forms.gle/nLRrMFRaZD18Po1H9",
         "message": "Са великом радошћу Вас позивамо да будете део нашег најлепшег дана и да са нама прославите почетак заједничког живота."
     }

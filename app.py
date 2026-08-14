@@ -25,7 +25,7 @@ INVITATIONS = {
         "datetime": "2026-09-20T15:00:00",
         "church_time": "12:00",
         "church": "Црква Свете Тројице",
-        "city_time": "12:00",
+        "city_time": "13:00",
         "city": "Општина Власотинце",
         "restaurant_time": "16:00",
         "restaurant": "Бавка скај",
